@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            color: #6a11cb;
+            margin: 20px 0;
+        }
+        .menu {
+            background-color: #6a11cb;
+            padding: 15px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .menu a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin: 50px 0;
+        }
+        a.button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+        }
+        a.button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Ana Menü -->
+    <div class="menu">
+        <a href="{{ url_for('view_members') }}">Members</a>
+        <a href="{{ url_for('view_trainers') }}">Trainers</a>
+        <a href="{{ url_for('view_workouts') }}">Workouts</a>
+        <a href="{{ url_for('view_equipment') }}">Equipment</a>
+    </div>
+
+    <!-- Ana Sayfa Başlığı -->
+    <h1>Welcome to Gym Management System</h1>
+
+    <!-- Bölüm Linkleri -->
+    <div class="section">
+        <a href="{{ url_for('view_members') }}" class="button">View Members</a>
+        <a href="{{ url_for('view_trainers') }}" class="button">View Trainers</a>
+        <a href="{{ url_for('view_workouts') }}" class="button">View Workouts</a>
+        <a href="{{ url_for('view_equipment') }}" class="button">View Equipment</a>
+    </div>
+</body>
+</html>
